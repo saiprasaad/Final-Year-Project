@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates"> -->
+    <link href="../static/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="../static/css/select2.min.css" rel="stylesheet" media="all">
+    <link href="../static/css/main.css" rel="stylesheet" media="all">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-dark" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/percentagehome">Delay Percentage</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-dark" href="/dornothome">Predict Delay</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/rankhome">Flight Recommendation</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-body">
+                    <h1 class="title" style="text-align: center">Percentage Delay in Journey</h1>
+                    <form action="/percentagedelay" method="post">
+                        <div class="input-group">
+                           <div class="rs-select2 js-select-simple select--no-search" style="width:100%;"> 
+                               <h3 class="title">ORIGIN</h3>
+                                        <select name="origin_airport">
+                                            <option disabled="disabled" selected="selected">Select Origin</option>
+                                            <option value="LAX">Los Angeles International Airport</option>
+                                            <option value="ATL">Atlanta International Airport</option>
+                                            <option value="SFO">San Fransisco International Airport</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                        </div>
+                        <div class="input-group">
+                           <div class="rs-select2 js-select-simple select--no-search" style="width:100%;">
+                               <h3 class="title">DESTINATION</h3>
+                                        <select name="dest_airport">
+                                            <option disabled="disabled" selected="selected">Select Destination</option>
+                                            <option value="BOS">Boston International Airport</option>
+                                            <option value="ABE">Lehigh Valley International Airport</option>
+                                            <option value="DFW">Dallas Worth International Airport</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search" style="width:100%;">
+                                <h3 class="title">AIRLINES</h3>
+                                         <select name="airlines_name">
+                                             <option disabled="disabled" selected="selected">Select Airlines</option>
+                                             <option value="EV">Express Jet</option>
+                                             <option value="AA">American Airlines</option>
+                                             <option value="UA">United Airlines</option>
+                                         </select>
+                                         <div class="select-dropdown"></div>
+                                     </div>
+                         </div>
+                        <div class="p-t-20" style="text-align: center">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/select2.min.js"></script>
+    <script src="../static/js/global.js"></script>
+
+</body>
+</html>
